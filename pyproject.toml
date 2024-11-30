@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "docx-code-walker"
+version = "0.1.0"
+description = ""
+authors = ["StarPandaBeg <kshmurakov@mail.ru>"]
+readme = "README.md"
+packages = [{include = "docx_code_walker", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-docx = "^1.1.2"
+click = "^8.1.7"
+
+[tool.poetry.scripts]
+docx = "docx_code_walker.cli:cli"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
