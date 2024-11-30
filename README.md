@@ -27,32 +27,32 @@ CodeWalker - это инструмент командной строки, кот
 
 1. Убедись что у тебя в системе установлен Python 3.10 или новее! Если нет - скачать можешь [по ссылке](https://www.python.org/downloads/release/python-31011/).
 
-```bash
-$ python -V
-Python 3.10.11
-```
+   ```bash
+   $ python -V
+   Python 3.10.11
+   ```
 
 2. Установи `pipx` в качестве глобальной зависимости. Подробнее о `pipx` можно почитать [тут](https://pipx.pypa.io/stable/).
 
-```bash
-$ py -m pip install --user pipx
-```
+   ```bash
+   $ py -m pip install --user pipx
+   ```
 
-Примечание: скорее всего, после этой команды будет выведено предупреждение вроде этого:
+   Примечание: скорее всего, после этой команды будет выведено предупреждение вроде этого:
 
-> WARNING: The script pipx.exe is installed in `<USER folder>\AppData\Roaming\Python\Python3x\Scripts` which is not on PATH
+   > WARNING: The script pipx.exe is installed in `<USER folder>\AppData\Roaming\Python\Python3x\Scripts` which is not on PATH
 
-Даже если оно выведено не было, рекомендуется зайти в указанную папку и выполнить следующую команду:
+   Даже если оно выведено не было, рекомендуется зайти в указанную папку и выполнить следующую команду:
 
-```bash
-$ pipx ensurepath
-```
+   ```bash
+   $ pipx ensurepath
+   ```
 
 3. Добавь инструмент в свою систему
 
-```bash
-$ pipx install git+https://github.com/StarPandaBeg/docx-code-walker.git
-```
+   ```bash
+   $ pipx install git+https://github.com/StarPandaBeg/docx-code-walker.git
+   ```
 
 Всё готово, теперь ты можешь использовать эту программу!
 
@@ -64,23 +64,23 @@ $ pipx install git+https://github.com/StarPandaBeg/docx-code-walker.git
 
 1. Пусть есть `C++` проект, состоящий из папок _include_ и _src_. Нужно сделать листинг всех файлов в этом проекте в Word. Используй следующую команду:
 
-```bash
-$ todocx project/include project/src
-```
+   ```bash
+   $ todocx project/include project/src
+   ```
 
-Итоговый файл будет создан в текущей папке с именем `output.docx`
+   Итоговый файл будет создан в текущей папке с именем `output.docx`
 
 2. Проект состоит из папки и нескольких файлов вне её. Нужно добавить их все, причём имя папки сохранять не нужно.
 
-```bash
-$ todocx --only-name project/folder1 project/file1.txt project/file2.txt
-```
+   ```bash
+   $ todocx --only-name project/folder1 project/file1.txt project/file2.txt
+   ```
 
 3. Проект получился слишком большим, поэтому уменьшим шрифт до 5pt и разместим текст в три колонки.
 
-```bash
-$ todocx -с 3 --font Consolas 5 project
-```
+   ```bash
+   $ todocx -с 3 --font Consolas 5 project
+   ```
 
 ### Игнорирование файлов
 
